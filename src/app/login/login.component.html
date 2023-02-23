@@ -1,17 +1,32 @@
 <div class="login-screen">
-  <div class="flex-col">
-    <div class="entrar">Entrar</div>
-    <div class="usuario">USUÁRIO</div>
-    <img class="line-5 line" src="/assets/img/Line 5.svg" alt="Line 5" />
-    <div class="senha">SENHA</div>
-    <img class="line" src="/assets/img/Line 6.svg" alt="Line 6" />
-    <p class="no-tem-conta-cadastre-j">
-      <span class="span">Não tem conta?</span>
-      <span class="inter-bold-purple-22px">Cadastre já!</span>
-    </p>
+  <div class="left-side">
+    <div class="content">
+      <div class="title">
+        <h3 class="roxin">Entrar</h3>
+      </div>
+      <div class="inputs">
+        <h4 class="">Usuário</h4>
+        <input>
+        <h4>Senha</h4>
+        <input>
+      </div>
+      <div class="sub-line">
+        <h5>Não tem conta?</h5>
+        <h5 class="roxin">Cadastre-se Já</h5>
+      </div>
+      <div class="faq">
+        <button routerLink='"faq"'(click)="biloles()">FAQ </button>
+      </div>
+      <div class="login-button">
+        <button >Entrar</button>
+      </div>
+    </div>
   </div>
-  <div class="flex-col-1">
-    <img class="vector" src="/assets/img/Vector.svg" alt="Vector" />
-    <div class="faq inter-bold-purple-22px">FAQ</div>
+  <div class="right-side">
+    <div class="spotifylogo">
+      <img src="/assets/img/spotify.svg" alt="">
+    </div>
   </div>
 </div>
+
+

@@ -16,6 +16,11 @@ const routes: Routes = [
   {
     path:'faq',
     component:FaqComponent
+  },
+  {
+    path:'',
+    redirectTo:'login',
+    pathMatch:'full'
   }
 ];
 

@@ -8,6 +8,9 @@ import { FaqComponent } from './faq.component';
   declarations: [
     FaqComponent
   ],
+  exports: [
+    FaqComponent
+  ],
   imports: [
     CommonModule
   ]
