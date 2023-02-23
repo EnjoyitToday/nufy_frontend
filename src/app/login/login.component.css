@@ -82,6 +82,13 @@
   display: flex;
 }
 
+.button-register{
+  color: #5A0682;
+  text-decoration: underline;
+  border: none;
+  background-color: white;
+}
+
 .faq{
   color: #5A0682;
   justify-content: center;
@@ -93,6 +100,7 @@
   color: #5A0682;
   text-decoration: underline;
   border: none;
+  background-color: white;
 }
 
 .spotifylogo{
