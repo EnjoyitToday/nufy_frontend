@@ -1,1 +1,87 @@
-<p>register works!</p>
+<div class="register-screen">
+  <div class="register-form-container">
+    <h1 class="register-form-container-title">Cadastro</h1>
+    <div class="register-form">
+      <h1 class="register-form-title">Inscreva-se e comece a curtir!</h1>
+      <div class="register-form-input-container">
+        <h1 class="register-form-label">Qual seu e-mail?</h1>
+        <input class="register-form-input" formControl="emailFormControl1" type="email">
+      </div>
+      <div class="register-form-input-container">
+        <h1 class="register-form-label">Confirme seu e-mail</h1>
+        <input class="register-form-input" type="email">
+      </div>
+      <div class="register-form-input-container">
+        <h1 class="register-form-label">Crie sua senha</h1>
+        <input class="register-form-input" type="password">
+      </div>
+      <div class="register-form-input-container">
+        <h1 class="register-form-label">Como devemos chamar você?</h1>
+        <input class="register-form-input" type="password">
+        <span>*Será o nome do seu perfil</span>
+      </div>
+      <div class="register-form-input-date-container">
+        <h1 class="register-form-input-date-container-title">Qual sua data de nascimento?</h1>
+        <div class="register-form-input-date-container-inputs">
+          <div class="register-form-input-date-container-inputs-day">
+            <h1>Dia</h1>
+            <input min="1" max="31" type="number">
+          </div>
+          <div class="register-form-input-date-container-inputs-month">
+            <h1>Mês</h1>
+            <input min="1" max="12" type="number">
+          </div>
+          <div class="register-form-input-date-container-inputs-year">
+            <h1>Ano</h1>
+            <input min="1950" max="2023" type="number">
+          </div>
+        </div>
+      </div>
+      <div class="register-form-input-gen-container">
+        <p>Qual seu gênero?</p>
+        <form name="gen" class="register-form-input-gen-form">
+          <div>
+            <input name="gen" name="Masculino" type="radio" placeholder="Masculino">
+            <label for="Masculino">Masculino</label>
+          </div>
+          <div>
+            <input name="gen" name="Feminino" type="radio" placeholder="Feminino">
+            <label for="Feminino">Feminino</label>
+          </div>
+          <div>
+            <input name="gen" name="Não-binário" type="radio" placeholder="Não-binário">
+            <label for="Não-binário">Não-binário</label>
+          </div>
+          <div>
+            <input name="gen" name="Outros" type="radio" placeholder="Outros">
+            <label for="Outros">Outros</label>
+          </div>
+          <div>
+            <input name="gen" name="Prefiro não dizer" type="radio" placeholder="Prefiro não dizer">
+            <label for="Prefiro não dizer">Prefiro não dizer</label>
+          </div>
+        </form>
+      </div>
+      <div class="register-form-checkbox-options-container">
+        <div class="register-form-checkbox-options">
+          <input type="checkbox" name="" id="">
+          <p>Eu concordo com os Termos e Condições de Uso do Spotify</p>
+        </div>
+        <div class="register-form-checkbox-options">
+          <input type="checkbox" name="" id="">
+          <p>Não quero receber mensagens de marketing do Spotify</p>
+        </div>
+      </div>
+      <div class="register-form-checkbox-button">
+        <button>Increver-se</button>
+      </div>
+    </div>
+
+  </div>
+  <div class="register-screen-spotify-logo">
+    <div>
+      <img class="register-screen-" src="/assets/img/white-spotify-logo.svg" alt="Vector" />
+      <p>Escute e compartilhe com os amigos!</p>
+    </div>
+  </div>
+</div>
