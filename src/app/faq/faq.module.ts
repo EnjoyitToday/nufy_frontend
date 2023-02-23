@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FaqComponent } from './faq.component';
+import { AlertModule } from '@coreui/angular';
+import { AccordionModule, SharedModule } from '@coreui/angular';
+
 
 
 
@@ -12,7 +15,10 @@ import { FaqComponent } from './faq.component';
     FaqComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AlertModule,
+    AccordionModule,
+    SharedModule
   ]
 })
 export class FaqModule { }

@@ -1,1 +1,56 @@
-<p>faq works!</p>
+<div class="container">
+    <div class="left-panel" style="width: 70%">
+      <div class="title-panel"><h1 class="title">F.A.Q</h1></div>
+      <div class="subtitle-panel"><h2 class="subtitle">Frequently Asked Questions</h2></div>
+      <div id ="accordion" class="accordion">
+
+        <c-accordion>
+          <c-accordion-item class="item" #item0="cAccordionItem" [visible]="false">
+            <ng-template cTemplateId="accordionHeaderTemplate">
+              <button (click)="item0.toggleItem()" [collapsed]="!item0.visible" cAccordionButton>
+                Como baixar o spotify no celular?
+              </button>
+            </ng-template>
+            <ng-template cTemplateId="accordionBodyTemplate">
+              <div class="accordion-body">
+                Para baixar bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+              </div>
+            </ng-template>
+          </c-accordion-item>
+          <c-accordion-item #item1="cAccordionItem" [visible]="false">
+            <ng-template cTemplateId="accordionHeaderTemplate">
+              <button (click)="item1.toggleItem()" [collapsed]="!item1.visible" cAccordionButton>
+                Como baixar o spotify no celular?
+              </button>
+            </ng-template>
+            <ng-template cTemplateId="accordionBodyTemplate">
+              <div class="accordion-body">
+                Para baixar bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+              </div>
+            </ng-template>
+          </c-accordion-item>
+          <c-accordion-item #item2="cAccordionItem" [visible]="false">
+            <ng-template cTemplateId="accordionHeaderTemplate">
+              <button (click)="item2.toggleItem()" [collapsed]="!item2.visible" cAccordionButton>
+                Como baixar o spotify no celular?
+              </button>
+            </ng-template> 
+            <ng-template cTemplateId="accordionBodyTemplate">
+              <div class="accordion-body">
+                Para baixar bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+              </div>
+            </ng-template>
+          </c-accordion-item>
+        </c-accordion>
+
+      </div>
+    </div>
+    <div class="right-panel" style="width: 30%">
+        <div class="register-screen-spotify-logo">
+            <div>
+              <img class="register-screen-" src="/assets/img/white-spotify-logo.svg" alt="Vector" />
+              <p>Escute e compartilhe com os amigos!</p>
+            </div>
+          </div>
+    </div>
+  </div>

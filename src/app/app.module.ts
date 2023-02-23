@@ -20,7 +20,7 @@ import { RegisterModule } from './register/register.module';
     RouterModule,
     LoginModule,
     FaqModule,
-    RegisterModule
+    RegisterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
