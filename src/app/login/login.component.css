@@ -1,0 +1,128 @@
+
+
+:root {
+    --black: rgba(0,0,0,1);
+    --roxinho: rgba(111,12,157,1);
+
+    --font-size-m: 22px;
+
+    --font-family-inter: "Inter";
+}
+
+.inter-bold-purple-22px{
+    color: rgba(111,12,157,1);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-m);
+    font-weight: 700;
+    font-style: normal;
+}
+
+.login-screen{
+    align-items: flex-start;
+    background-color: #ffffff;
+    border: 1px none;
+    display: flex;
+    gap: 252px;
+    height: 100%;
+    padding: 86px 106px;
+    width: 100%;
+}
+
+.hidden, .hidden * {
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.flex-col{
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin-top: 210px;
+    min-height: 389px;
+    width: 578px;
+}
+
+.login .line{
+    height: 2px;
+    margin-top: 42px;
+    object-fit: cover;
+    width: 572px;
+}
+
+.line-5 {
+    align-self: flex-end;
+}
+
+.no-tem-conta-cadastre-j {
+    color: transparent;
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-m);
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-left: 6px;
+    margin-top: 98px;
+    min-height: 27px;
+}
+
+.span{
+    color:  rgba(0,0,0,1);
+}
+
+.senha{
+    color: #d4cdcd;
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-m);
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: 53px;
+    min-height: 27px;
+}
+
+.entrar {
+    color: var(--black);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-m);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-left: 6px;
+    min-height: 27px;
+}
+
+.usuario{
+    color: var(--roxinho);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-m);
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-left: 6px;
+    margin-top: 42px;
+    min-height: 27px;
+}
+
+.flex-col-1 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 539px;
+    margin-top: 91px;
+    min-height: 813px;
+    width: 808px;
+}
+
+.vector {
+    height: 248px;
+    width: 808px;
+}
+
+.faq {
+    letter-spacing: 0;
+    line-height: normal;
+    margin-left: 4px;
+    min-height: 26px;
+    text-decoration:  underline;
+    width: 55px;
+}
