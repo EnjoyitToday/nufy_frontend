@@ -1,23 +1,21 @@
 .main-panel {
     display: flex;
-    height: 100%;
+    min-height: 100%;
     width: 100%;
-    background-color: red;
     
 }
 
 .left-panel {
-    height: 100%;
+    min-height: 100%;
     width: 100%;
+    background-color: #ebbfff;
+    
 }
 
 .right-panel {
-    position: sticky;
+    position: fixed;
+    right: 0;
     height: 100%;
-}
-
-.left-panel {
-    background-color: #ebbfff;
 }
 
 .title-panel{
@@ -49,6 +47,7 @@
     margin-left: 2%;
     margin-right: 2%;
 }
+
 
 .register-screen-spotify-logo {
     min-height: 100vh;
