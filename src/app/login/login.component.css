@@ -26,6 +26,7 @@
 
 .right-side{
   display: flex;
+  flex-wrap: wrap;
   height: 100%;
   width: 50%;
   justify-content: center;
@@ -103,8 +104,8 @@
   background-color: white;
 }
 
-.spotifylogo{
-  width: 90%;
+.spotifylogo img{
+  width: 70%;
   height: 30%;
   margin-top: 7%;
 }
