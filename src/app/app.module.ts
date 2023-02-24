@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { LoginModule } from './login/login.module';
 import { FaqModule } from './faq/faq.module';
 import { RegisterModule } from './register/register.module';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { RegisterModule } from './register/register.module';
     LoginModule,
     FaqModule,
     RegisterModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

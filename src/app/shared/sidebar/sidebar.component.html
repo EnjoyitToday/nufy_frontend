@@ -1,0 +1,27 @@
+<div class="sidebar">
+  <div class="top-container">
+    <div class="buttons">
+      <button class="sidebar-button" *ngFor="let button of buttonsTop">
+        {{ button }}
+      </button>
+
+    </div>
+  </div>
+
+  <div class="mid-container">
+    <div class="buttons">
+      <button class="sidebar-button" *ngFor="let button of buttonsMid">
+        {{ button }}
+      </button>
+    </div>
+  </div>
+
+  <div class="playlist-container">
+    <div class="playlist-buttons">
+      <button class="sidebar-button" *ngFor="let button of buttonsPlaylist">
+        {{ button }}
+      </button>
+    </div>
+
+  </div>
+</div>

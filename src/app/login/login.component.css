@@ -1,12 +1,4 @@
-/*
-:root {
-    --black: rgba(0,0,0,1);
-    --roxinho: rgba(111,12,157,1);
 
-    --font-size-m: 22px;
-
-    --font-family-inter: "Inter";
-} */
 .roxin{
   color: #5A0682;
 }
@@ -19,25 +11,26 @@
 .left-side{
   display: flex;
   height: 100%;
-  width: 50%;
+  width: 70%;
   justify-content: center;
   align-items: center;
 }
 
 .right-side{
-  display: flex;
-  flex-wrap: wrap;
   height: 100%;
-  width: 50%;
+  width: 30%;
+  display: flex;
   justify-content: center;
+  background-color: #5A0682;
 }
 
 .content{
-  width: 50%;
+  width: 80%;
   height: 60%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  /* border: 1px solid black; */
 
 }
 
@@ -46,16 +39,17 @@
 }
 
 .login-button{
-  width: 100%;
+  width: 60%;
   height: 10%;
   display: flex;
+  /* background-color: red; */
   justify-content: center;
   align-items: center;
 }
 
 .login-button button{
   background-color: #5A0682;
-  width: 60%;
+  width: 50%;
   height: 100%;
   border-radius: 15px;
   border: 0;
@@ -65,14 +59,20 @@
 
 .inputs{
   height: 20%;
-  width: 100%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+
+}
+
+::placeholder {
+  color: rgb(219, 219, 219);
+  font-weight: 100;
 }
 
 .inputs input{
-  width: 80%;
+  width: 50%;
   height: 15%;
   outline: none;
   border: none;
@@ -101,11 +101,19 @@
   color: #5A0682;
   text-decoration: underline;
   border: none;
-  background-color: white;
+  background-color: #ffffff
+}
+
+.spotifylogo{
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .spotifylogo img{
-  width: 70%;
-  height: 30%;
-  margin-top: 7%;
+  width: 90%;
+  height: 90%;
+  filter: invert(80%) sepia(100%) saturate(0%) hue-rotate(156deg) brightness(107%) contrast(109%);
 }
