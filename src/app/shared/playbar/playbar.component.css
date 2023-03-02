@@ -72,17 +72,41 @@
 }
 
 .tiny-buttons{
-  height: 75%;
+  height: 50%;
   width: 15%;
 }
 
 .play-button{
-  height: 95%;
-  width: 20%;
+  height: 70%;
+  width: 15%;
 }
 /* /BUTTONS */
+
 .right-buttons{
   height: 95%;
   width: 25%;
-  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.option-buttons{
+  width: 40%;
+  height: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.volumebar{
+  width: 40%;
+  height: 20%;
+  background-color: purple;
+  border-radius: 15px;
+}
+
+.option{
+  height: 80%;
+  width: 15%;
+  background-color: gray;
 }

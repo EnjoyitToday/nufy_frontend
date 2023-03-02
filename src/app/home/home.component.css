@@ -19,3 +19,17 @@
   width: 100%;
   height: 8%;
 }
+
+/* HOME CSS */
+
+.main-top-content{
+  width: 100%;
+  height: 50%;
+  background-color: black;
+}
+
+.main-bot-content{
+  width: 100%;
+  height: 50%;
+  background-color: firebrick;
+}
