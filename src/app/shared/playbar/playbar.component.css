@@ -64,6 +64,17 @@
   align-items: center;
 }
 
+.music-buttons-layout{
+  border: none;
+  height: 80%;
+  width: 15%;
+  background-color: transparent;
+}
+
+.music-buttons-layout:hover img{
+  height: 90%;
+}
+
 .progress-bar{
   width: 95%;
   height: 20%;
@@ -72,13 +83,13 @@
 }
 
 .tiny-buttons{
-  height: 50%;
-  width: 15%;
+  height: 70%;
+  width: 70%;
 }
 
 .play-button{
-  height: 70%;
-  width: 15%;
+  height: 80%;
+  width: 80%;
 }
 /* /BUTTONS */
 

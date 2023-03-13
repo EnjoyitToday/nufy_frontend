@@ -16,11 +16,9 @@
   </div>
   <div class="buttons">
     <div class="music-buttons">
-      <img class="tiny-buttons" src="/assets/img/RandomQueue.svg" alt="">
-      <img class="tiny-buttons"src="/assets/img/Back.svg" alt="">
-      <img class="play-button"src="/assets/img/Play.svg" alt="">
-      <img class="tiny-buttons"src="/assets/img/Next.svg" alt="">
-      <img class="tiny-buttons"src="/assets/img/Repeat.svg" alt="">
+      <button *ngFor="let buttons of buttonsArray" class="music-buttons-layout">
+        <img class="{{ buttons.classStyle }}" src="{{ buttons.source }}" alt="">
+      </button>
     </div>
     <div class="progress-bar">
 
