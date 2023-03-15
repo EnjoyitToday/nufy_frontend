@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
-import { PlaybarModule } from '../shared/playbar/playbar.module';
-import { SidebarModule } from '../shared/sidebar/sidebar.module';
 
 
 
@@ -10,10 +8,11 @@ import { SidebarModule } from '../shared/sidebar/sidebar.module';
   declarations: [
     HomeComponent
   ],
+  exports: [
+    HomeComponent
+  ],
   imports: [
-    CommonModule,
-    PlaybarModule,
-    SidebarModule
+    CommonModule
   ]
 })
 export class HomeModule { }

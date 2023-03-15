@@ -1,27 +1,18 @@
-.home-container{
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .home-content{
-  width: 88%;
-  height: 92%;
-  background-color: white;
-}
-
-.side-bar{
-  width: 12%;
-  height: 92%;
-}
-
-.playbar{
   width: 100%;
-  height: 8%;
+  height: 100%;
+}
+/* HOME CSS */
+
+::-webkit-scrollbar {
+  background-color: rgb(255, 255, 255);
+  height: 9px; /* Largura da barra */
 }
 
-/* HOME CSS */
+::-webkit-scrollbar-thumb {
+  background-color: #9375e7; /* Cor da barra */
+  border-radius: 15px;
+}
 
 .main-top-content{
   width: 100%;
@@ -29,7 +20,6 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-
 }
 
 .propaganda{
@@ -46,8 +36,8 @@
 }
 
 .propaganda-img{
-  height: 88%;
-  width: 23%;
+  height: 85%;
+  width: 20%;
   border-radius: 15px;
 }
 
@@ -55,15 +45,17 @@
   width: 70%;
   height: 30%;
   color: black;
-  font-size: 40px;
+  font-size: 200%;
   border-radius: 15px;
+  margin: 0;
 }
 .propaganda-subtext{
   width: 70%;
   height: 50%;
   color: black;
-  font-size: 15px;
+  font-size: 100%;
   border-radius: 15px;
+  margin-top: 2%;
 }
 
 .buttons-propaganda{
@@ -80,9 +72,17 @@
   justify-content: space-around;
 }
 
-.propaganda-listen{
+.propaganda-listen-space{
   width: 40%;
-  height: 100%;
+  height: 95%;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.propaganda-listen{
+  width: 90%;
+  height: 90%;
   border: #ffff solid 1px;
   background-color: #9375e7;
   color: #ffff;
@@ -91,15 +91,43 @@
   font-size: 17px;
 }
 
-.propaganda-follow{
-  width: 40%;
+.propaganda-listen:hover{
+  width: 100%;
   height: 100%;
+  transition: 0.2s;
+  background-color: white;
+  color:#9375e7;
+  border: 1px solid #9375e7;
+  font-size: 19px;
+}
+
+.propaganda-follow-space{
+  width: 40%;
+  height: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.propaganda-follow{
+  width: 90%;
+  height: 90%;
   border: #ffff solid 1px;
   background-color: #000000;
   color: #ffff;
   border-radius: 15px;
   font-weight: 100;
   font-size: 17px;
+}
+
+.propaganda-follow:hover{
+  width: 100%;
+  height: 100%;
+  transition: 0.2s;
+  background-color: white;
+  color:#000000;
+  border: 1px solid #000000;
+  font-size: 19px;
 }
 
 .main-bot-content{
@@ -128,29 +156,46 @@
   width: 100%;
   height: 83%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  gap:2.5%;
+  overflow: auto;
+  min-width: 100%
 }
 
+
+
 .card-space{
-  width: 100%;
-  height: 90%;
+  height: 95%;
+  width: 12%;
+  min-height: 95%;
+  min-width: 12%;
+  /* background-color:hotpink; */
   display: flex;
-  flex-wrap: wrap;
-  overflow-x: auto;
+  align-items: center;
+  justify-content: center;
 }
 
 .card{
   height: 90%;
-  width: 10%;
-  background-color:#e8dfff;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  width: 90%;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin-left: 2.5%;
   margin-right: 2.5%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border: none;
+}
+
+.card:hover{
+  transition: 0.1s;
+  height: 95%;
+  width: 95%;
+  background-color:#e8dfff;
+  font-size: 110%;
+  color:white
 }
 
 .card-image{
@@ -163,5 +208,5 @@
   height: 25%;
   display: flex;
   justify-content: center;
-  font-size: 30px;
+  font-size: 180%;
 }

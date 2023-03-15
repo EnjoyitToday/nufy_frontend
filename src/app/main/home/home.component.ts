@@ -38,21 +38,30 @@ export class HomeComponent {
       image:"/assets/img/Slippery When Wet.svg",
       name:'baojove'
     },
-    // {
-    //   image:"/assets/img/Slippery When Wet.svg",
-    //   name:'baojove'
-    // },
-    // {
-    //   image:"/assets/img/Slippery When Wet.svg",
-    //   name:'baojove'
-    // },
-    // {
-    //   image:"/assets/img/Slippery When Wet.svg",
-    //   name:'baojove'
-    // },
+    {
+      image:"/assets/img/Slippery When Wet.svg",
+      name:'baojove'
+    },
+    {
+      image:"/assets/img/Slippery When Wet.svg",
+      name:'baojove'
+    },
+    {
+      image:"/assets/img/Slippery When Wet.svg",
+      name:'baojove'
+    },
+    {
+      image:"/assets/img/Slippery When Wet.svg",
+      name:'baojove'
+    },
+    {
+      image:"/assets/img/Slippery When Wet.svg",
+      name:'baojove'
+    },
     {
       image:"/assets/img/Slippery When Wet.svg",
       name:'baojove'
     }
   ]
+
 }

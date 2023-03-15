@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
 import { LoginModule } from './login/login.module';
 import { FaqModule } from './faq/faq.module';
 import { RegisterModule } from './register/register.module';
-import { HomeModule } from './home/home.module';
+import { MainModule } from './main/main.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { HomeModule } from './home/home.module';
     LoginModule,
     FaqModule,
     RegisterModule,
-    HomeModule
+    MainModule
   ],
   providers: [],
   bootstrap: [AppComponent]

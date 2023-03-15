@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ButtonsArray } from './buttonsArray';
 
 @Component({
-  selector: 'playbar',
+  selector: 'app-playbar',
   templateUrl: './playbar.component.html',
   styleUrls: ['./playbar.component.css']
 })

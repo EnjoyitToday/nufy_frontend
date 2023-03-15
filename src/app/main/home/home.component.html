@@ -1,0 +1,41 @@
+<div class="home-content">
+  <div class="main-top-content">
+    <div class="propaganda" *ngFor="let propaganda of propagandas">
+      <img class="propaganda-img" src="{{ propaganda.source }}">
+      <div class="propaganda-text">
+        <p> {{ propaganda.text }}</p>
+      </div>
+      <div class="propaganda-subtext">
+        <p> {{ propaganda.subtext }} </p>
+        <div class="buttons-propaganda">
+          <div class="aux">
+            <div class="propaganda-listen-space">
+              <button class="propaganda-listen">Escutar!</button>
+            </div>
+            <div class="propaganda-follow-space">
+              <button class="propaganda-follow">Seguir!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main-bot-content">
+    <div class="your-playlists">
+      <h1 class="yourPlaylistsTitle">Suas Playlists</h1>
+      <div class="looping-space">
+        <div class="card-space" *ngFor="let playlist of playlists">
+          <div class="card">
+            <img class="card-image" src="{{ playlist.image }}">
+            <div class="card-text">
+              {{
+                playlist.name
+              }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

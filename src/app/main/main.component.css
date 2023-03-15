@@ -1,0 +1,22 @@
+.home-container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.home-content{
+  width: 88%;
+  height: 92%;
+}
+
+.side-bar{
+  width: 12%;
+  height: 92%;
+}
+
+.playbar{
+  width: 100%;
+  height: 8%;
+}
+
