@@ -1,0 +1,64 @@
+.user-button{
+  width: 100%;
+  height: 100%;
+  background-color: #D0BFFF;
+  border-radius: 30px;
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  justify-content: center;
+  align-items: center;
+}
+
+.img{
+  width: 20%;
+  height: 95%;
+  border-radius: 360px;
+}
+
+.img img{
+  width: 100%;
+  height: 100%;
+  border-radius: 9999999px;
+}
+
+.text{
+  width: 55%;
+  height: 60%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-down{
+  width: 20%;
+  height: 90%;
+  border-radius: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow-down:hover{
+  background-color: white;
+
+}
+
+.arrow-down button{
+  width: 100%;
+  height: 100%;
+  background-color: #D0BFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 9999px;
+}
+
+.arrow-down button:hover{
+  background-color: white;
+}
+
+.arrow-down img:hover{
+  filter: invert(71%) sepia(57%) saturate(413%) hue-rotate(205deg) brightness(101%) contrast(101%);
+}

@@ -6,6 +6,7 @@ import { SidebarModule } from '../shared/sidebar/sidebar.module';
 import { RouterModule } from '@angular/router';
 import { HomeModule } from './home/home.module';
 import { PlaylistDetailsModule } from './playlist-details/playlist-details.module';
+import { UserButtonModule } from '../shared/user-button/user-button.module';
 
 
 
@@ -22,7 +23,8 @@ import { PlaylistDetailsModule } from './playlist-details/playlist-details.modul
     SidebarModule,
     RouterModule,
     HomeModule,
-    PlaylistDetailsModule
+    PlaylistDetailsModule,
+    UserButtonModule
   ]
 })
 export class MainModule { }
