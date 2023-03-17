@@ -157,45 +157,54 @@
   height: 83%;
   display: flex;
   align-items: center;
-  gap:2.5%;
+  gap:2%;
   overflow: auto;
-  min-width: 100%
+  min-width: 100%;
 }
-
-
 
 .card-space{
   height: 95%;
   width: 12%;
   min-height: 95%;
   min-width: 12%;
-  /* background-color:hotpink; */
   display: flex;
   align-items: center;
   justify-content: center;
+  /* background-color:hotpink; */
+}
+
+.card-button{
+  border: none;
+  width: 90%;
+  height: 90%;
+  background:none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: red; */
 }
 
 .card{
-  height: 90%;
-  width: 90%;
+  height: 100%;
+  width: 100%;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  margin-left: 2.5%;
-  margin-right: 2.5%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: none;
 }
 
 .card:hover{
+  background-color:#e8dfff;
+  color:white
+}
+
+.card-button:hover{
   transition: 0.1s;
   height: 95%;
   width: 95%;
-  background-color:#e8dfff;
   font-size: 110%;
-  color:white
 }
 
 .card-image{

@@ -1,4 +1,4 @@
-import { UserPlaylist } from "./UserPlaylist";
+import { Playlist } from "./playlist";
 
 export interface User {
   user_id:string;
@@ -7,5 +7,5 @@ export interface User {
   username:string;
   password:string;
   favorite_songs:String[];
-  playlists:UserPlaylist[];
+  playlists:Playlist[];
 }

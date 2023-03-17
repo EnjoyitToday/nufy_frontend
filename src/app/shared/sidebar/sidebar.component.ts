@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { Playlist } from 'src/app/user/playlist';
+import { UserService } from 'src/app/user/user.service';
 
 @Component({
   selector: 'sidebar',
@@ -7,6 +9,11 @@ import { Component, Input } from '@angular/core';
 })
 export class SidebarComponent {
 
+  constructor(
+    private userdata:UserService
+  ){
+    this.buttonsPlaylist = this.userdata.loggedUser.playlists
+  }
 
   buttonsTop:string[]=[
     'Início',
@@ -21,19 +28,5 @@ export class SidebarComponent {
   ];
 
   @Input()
-  buttonsPlaylist:string[]=[
-    'button3',
-    'button4',
-    'button5',
-    'button6',
-    'button7',
-    'button8',
-    'button9',
-    'button5',
-    'button6',
-    'button7',
-    'button8',
-    'button9',
-    'button10'
-  ];
+  buttonsPlaylist:Playlist[]=[];
 }

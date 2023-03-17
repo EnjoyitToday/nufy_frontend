@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Playlist } from './playlist';
+import { UserService } from 'src/app/user/user.service';
+import { Playlist } from '../../user/playlist';
 import { Propaganda } from './propaganda';
 
 @Component({
@@ -8,6 +9,13 @@ import { Propaganda } from './propaganda';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+
+  constructor(
+    private userdata:UserService
+  ){
+    this.playlists = this.userdata.loggedUser.playlists
+  }
+
   public propagandas:Propaganda[]=[
     {
       source:"/assets/img/Slippery When Wet.svg",
@@ -21,47 +29,9 @@ export class HomeComponent {
     }
   ]
 
-  public playlists:Playlist[]=[
-    {
-      image:"/assets/img/Slippery When Wet.svg",
-      name:'baojove'
-    },
-    {
-      image:"/assets/img/Slippery When Wet.svg",
-      name:'baojove'
-    },
-    {
-      image:"/assets/img/Slippery When Wet.svg",
-      name:'baojove'
-    },
-    {
-      image:"/assets/img/Slippery When Wet.svg",
-      name:'baojove'
-    },
-    {
-      image:"/assets/img/Slippery When Wet.svg",
-      name:'baojove'
-    },
-    {
-      image:"/assets/img/Slippery When Wet.svg",
-      name:'baojove'
-    },
-    {
-      image:"/assets/img/Slippery When Wet.svg",
-      name:'baojove'
-    },
-    {
-      image:"/assets/img/Slippery When Wet.svg",
-      name:'baojove'
-    },
-    {
-      image:"/assets/img/Slippery When Wet.svg",
-      name:'baojove'
-    },
-    {
-      image:"/assets/img/Slippery When Wet.svg",
-      name:'baojove'
-    }
-  ]
+  public playlists:Playlist[]=[]
 
+  playlistDetails(playlist:Playlist){
+    console.log(playlist)
+  }
 }
