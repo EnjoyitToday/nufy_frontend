@@ -19,13 +19,13 @@ export class HomeComponent {
   public propagandas:Propaganda[]=[
     {
       source:"/assets/img/Slippery When Wet.svg",
-      text:"PERFEITO PARA VOCE",
-      subtext:"TEXT TEXT TEXT TEXT TEXT TEXT"
+      text:"PERFEITO PARA VOCÊ!",
+      subtext:"CONFIRA JÁ ALBUNS QUE BATEM COM SUA VIBE"
     },
     {
       source:"/assets/img/Slippery When Wet.svg",
-      text:"PERFEITO PARA VOCE",
-      subtext:"TEXT TEXT TEXT TEXT TEXT TEXT"
+      text:"ESCUTE JÁ!",
+      subtext:"PENSAMOS QUE GOSTARIA DISSO, QUE TAL EXPERIMENTAR?"
     }
   ]
 

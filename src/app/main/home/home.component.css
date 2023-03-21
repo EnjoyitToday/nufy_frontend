@@ -210,6 +210,7 @@
 .card-image{
   width: 80%;
   height: 70%;
+  border-radius: 15px;
 }
 
 .card-text{

@@ -88,10 +88,19 @@
   width: 70%;
 }
 
+.tiny-buttons:hover{
+  filter: invert(13%) sepia(66%) saturate(6617%) hue-rotate(280deg) brightness(68%) contrast(102%);
+}
+
 .play-button{
   height: 80%;
   width: 80%;
 }
+
+.play-button:hover{
+  filter: invert(13%) sepia(66%) saturate(6617%) hue-rotate(280deg) brightness(68%) contrast(102%);
+}
+
 /* /BUTTONS */
 
 .right-buttons{
@@ -113,7 +122,7 @@
 .volumebar{
   width: 40%;
   height: 20%;
-  background-color: purple;
+  background-color: #9375e7;
   border-radius: 15px;
 }
 

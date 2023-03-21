@@ -22,7 +22,7 @@ export class UserService {
       {
         idPlaylist:'1',
         playlist_name:'playlist1',
-        image:'/assets/img/noProfilePicture.svg',
+        image:'/assets/img/noPlaylistPicture.svg',
         musics:[
           'musica1',
           'musica2',
@@ -33,7 +33,7 @@ export class UserService {
       {
         idPlaylist:'2',
         playlist_name:'playlist2',
-        image:'/assets/img/noProfilePicture.svg',
+        image:'/assets/img/noPlaylistPicture.svg',
         musics:[
           'musica1',
           'musica2',
@@ -44,7 +44,7 @@ export class UserService {
       {
         idPlaylist:'3',
         playlist_name:'playlist3',
-        image:'/assets/img/noProfilePicture.svg',
+        image:'/assets/img/noPlaylistPicture.svg',
         musics:[
           'musica1',
           'musica2',
@@ -55,7 +55,7 @@ export class UserService {
       {
         idPlaylist:'4',
         playlist_name:'playlist4',
-        image:'/assets/img/noProfilePicture.svg',
+        image:'/assets/img/noPlaylistPicture.svg',
         musics:[
           'musica1',
           'musica2',
@@ -66,7 +66,7 @@ export class UserService {
       {
         idPlaylist:'5',
         playlist_name:'playlist5',
-        image:'/assets/img/noProfilePicture.svg',
+        image:'/assets/img/noPlaylistPicture.svg',
         musics:[
           'musica1',
           'musica2',
@@ -77,7 +77,7 @@ export class UserService {
       {
         idPlaylist:'6',
         playlist_name:'playlist6',
-        image:'/assets/img/noProfilePicture.svg',
+        image:'/assets/img/noPlaylistPicture.svg',
         musics:[
           'musica1',
           'musica2',
@@ -88,7 +88,7 @@ export class UserService {
       {
         idPlaylist:'7',
         playlist_name:'playlist7',
-        image:'/assets/img/noProfilePicture.svg',
+        image:'/assets/img/noPlaylistPicture.svg',
         musics:[
           'musica1',
           'musica2',
@@ -99,7 +99,7 @@ export class UserService {
       {
         idPlaylist:'8',
         playlist_name:'playlist8',
-        image:'/assets/img/noProfilePicture.svg',
+        image:'/assets/img/noPlaylistPicture.svg',
         musics:[
           'musica1',
           'musica2',
@@ -110,7 +110,7 @@ export class UserService {
       {
         idPlaylist:'9',
         playlist_name:'playlist9',
-        image:'/assets/img/noProfilePicture.svg',
+        image:'/assets/img/noPlaylistPicture.svg',
         musics:[
           'musica1',
           'musica2',
@@ -121,7 +121,7 @@ export class UserService {
       {
         idPlaylist:'10',
         playlist_name:'playlist10',
-        image:'/assets/img/noProfilePicture.svg',
+        image:'/assets/img/noPlaylistPicture.svg',
         musics:[
           'musica1',
           'musica2',
@@ -132,7 +132,7 @@ export class UserService {
       {
         idPlaylist:'11',
         playlist_name:'playlist11',
-        image:'/assets/img/noProfilePicture.svg',
+        image:'/assets/img/noPlaylistPicture.svg',
         musics:[
           'musica1',
           'musica2',
@@ -143,7 +143,7 @@ export class UserService {
       {
         idPlaylist:'12',
         playlist_name:'playlist12',
-        image:'/assets/img/noProfilePicture.svg',
+        image:'/assets/img/noPlaylistPicture.svg',
         musics:[
           'musica1',
           'musica2',
@@ -154,7 +154,7 @@ export class UserService {
       {
         idPlaylist:'13',
         playlist_name:'playlist13',
-        image:'/assets/img/noProfilePicture.svg',
+        image:'/assets/img/noPlaylistPicture.svg',
         musics:[
           'musica1',
           'musica2',
@@ -165,7 +165,7 @@ export class UserService {
       {
         idPlaylist:'14',
         playlist_name:'playlist14',
-        image:'/assets/img/noProfilePicture.svg',
+        image:'/assets/img/noPlaylistPicture.svg',
         musics:[
           'musica1',
           'musica2',
