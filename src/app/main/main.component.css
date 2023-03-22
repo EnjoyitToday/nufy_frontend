@@ -29,3 +29,11 @@
   right: 5%;
   /* background-color: red; */
 }
+
+@media (max-width:749px){
+  
+
+.side-bar{
+  display: none;
+}
+}

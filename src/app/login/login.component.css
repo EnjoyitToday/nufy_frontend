@@ -48,18 +48,20 @@
   height: 10%;
   display: flex;
   /* background-color: red; */
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
-.login-button button{
-  background-color: #5A0682;
+.login-button-enter{
+  /* background-color: #5A0682; */
   width: 50%;
   height: 100%;
   border-radius: 15px;
   border: 0;
   font-size: 20px;
   color: white;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgb(176, 71, 225) 0%, rgba(145,39,195,1) 35%, rgba(90,6,130,1) 100%);
 }
 
 .inputs{
@@ -81,19 +83,35 @@
 
 .inputs input,textarea{
   background-color: transparent;
+  padding-block: 3%;
+  padding-inline: 1.5%;
+  box-sizing: border-box;
 }
 
 ::placeholder {
   color: rgb(219, 219, 219);
   font-weight: 100;
-}
+} 
 
 .sub-line{
   display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .button-register{
+  /* color: #5A0682; */
+  color: white;
+  text-decoration: underline;
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  margin-left: 1%;
+}
+
+.button-register:hover{ 
   color: #5A0682;
+  transition: 200ms;
   text-decoration: underline;
   border: none;
   background-color: transparent;

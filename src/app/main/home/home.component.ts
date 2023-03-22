@@ -25,7 +25,7 @@ export class HomeComponent {
     {
       source:"/assets/img/Slippery When Wet.svg",
       text:"ESCUTE JÁ!",
-      subtext:"PENSAMOS QUE GOSTARIA DISSO, QUE TAL EXPERIMENTAR?"
+      subtext:"PENSAMOS QUE GOSTARIA DISSO"
     }
   ]
 
