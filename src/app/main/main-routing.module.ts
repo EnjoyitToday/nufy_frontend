@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { MainComponent } from './main.component';
 import { PlaylistDetailsComponent } from './playlist-details/playlist-details.component';
 
 const routes: Routes = [
@@ -10,7 +9,7 @@ const routes: Routes = [
     component:HomeComponent,
   },
   {
-    path:'details',
+    path:'details/:id',
     component:PlaylistDetailsComponent,
   },
   {

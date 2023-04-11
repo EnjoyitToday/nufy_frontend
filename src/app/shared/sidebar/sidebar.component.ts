@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { Playlist } from 'src/app/user/playlist';
-import { UserService } from 'src/app/user/user.service';
+import { Playlist } from 'src/app/services/user/playlist';
+import { UserService } from 'src/app/services/user/user.service';
 
 @Component({
   selector: 'sidebar',

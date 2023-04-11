@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { UserService } from 'src/app/user/user.service';
-import { Playlist } from '../../user/playlist';
+import { UserService } from 'src/app/services/user/user.service';
+import { Playlist } from '../../services/user/playlist';
 import { Propaganda } from './propaganda';
 
 @Component({

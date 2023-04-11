@@ -18,7 +18,7 @@
 
   <div class="playlist-container">
     <div class="playlist-buttons">
-      <button class="playlist-button" *ngFor="let playlist of buttonsPlaylist">
+      <button class="playlist-button" *ngFor="let playlist of buttonsPlaylist" routerLink='/main/details/{{playlist.idPlaylist}}'>
         {{ playlist.playlist_name }}
       </button>
     </div>
