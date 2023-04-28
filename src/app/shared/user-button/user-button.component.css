@@ -23,6 +23,20 @@
   width: 95%;
   height: 95%;
   font-size: 105%;
+  background-color: white;
+}
+
+.user-button:hover .text{
+  color:#D0BFFF;
+}
+
+.user-button:hover .text{
+  color:#D0BFFF;
+}
+
+
+.user-button:hover .arrow-down img{
+  filter: invert(71%) sepia(57%) saturate(413%) hue-rotate(205deg) brightness(101%) contrast(101%);
 }
 
 .img{
@@ -58,14 +72,13 @@
 }
 
 .arrow-down:hover{
-  background-color: white;
-
+  background-color:#D0BFFF;
 }
 
 .arrow-down button{
   width: 100%;
   height: 100%;
-  background-color: #D0BFFF;
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,10 +86,6 @@
   border-radius: 9999px;
 }
 
-.arrow-down button:hover{
-  background-color: white;
-}
-
 .arrow-down img:hover{
-  filter: invert(71%) sepia(57%) saturate(413%) hue-rotate(205deg) brightness(101%) contrast(101%);
+
 }

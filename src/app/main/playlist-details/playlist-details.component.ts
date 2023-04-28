@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { CurrentMusicService } from 'src/app/services/current_music/current_music.service';
 import { Music } from 'src/app/services/user/music';
 import { Playlist } from 'src/app/services/user/playlist';
 import { UserService } from 'src/app/services/user/user.service';
@@ -16,24 +17,27 @@ export class PlaylistDetailsComponent implements OnInit{
 
   constructor(
     private activatedRoute:ActivatedRoute,
-    public userdata:UserService
-  ){}
+    public userdata:UserService,
+    private currentMusicService:CurrentMusicService,
+    private router:Router
+
+  ){
+  }
 
   ngOnInit(): void {
-    this.playlist_id = this.activatedRoute.snapshot.paramMap.get("id")!
-    this.userdata.loggedUser.playlists.map(
-      (e)=>{
-        if(e.idPlaylist == this.playlist_id){
-          this.selected_playlist = e;
+    this.router.events.subscribe((e)=>{
+      this.playlist_id = this.activatedRoute.snapshot.paramMap.get("id")!
+      this.userdata.loggedUser.playlists.map(
+        (e)=>{
+          if(e.idPlaylist == this.playlist_id){
+            this.selected_playlist = e;
+          }
         }
-      }
-    )
+      )
+    })
   }
 
   playAudio(music:Music){
-    let audio = new Audio();
-    audio.src = `${music.path}`;
-    audio.load();
-    audio.play();
+    this.currentMusicService.playAudio(music);
   }
 }

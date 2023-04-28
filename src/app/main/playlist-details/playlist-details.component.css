@@ -123,9 +123,22 @@
   display: flex;
   font-size: 130%;
   color:#D0BFFF ;
-  /* background-color: red; */
+  /* background-color: blue; */
+  height: 90%;
+  width: 100%;
   margin: 0;
   padding: 0;
+  justify-content: center;
+  align-items: center
+}
+.number p{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  /* background-color: yellow; */
 }
 
 .playbutton{

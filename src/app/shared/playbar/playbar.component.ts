@@ -8,6 +8,8 @@ import { ButtonsArray } from './buttonsArray';
 })
 export class PlaybarComponent {
 
+  constructor(){}
+
   public buttonsArray:ButtonsArray[]=[
     {
       classStyle:"tiny-buttons",

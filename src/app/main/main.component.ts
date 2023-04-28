@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PlaybarComponent } from '../shared/playbar/playbar.component';
 
 @Component({
   selector: 'app-main',
