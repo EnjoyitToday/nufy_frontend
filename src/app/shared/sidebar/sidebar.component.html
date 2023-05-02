@@ -1,8 +1,8 @@
 <div class="sidebar">
   <div class="top-container">
     <div class="buttons">
-      <button class="sidebar-button" *ngFor="let button of buttonsTop" routerLink="/main">
-        {{ button }}
+      <button class="sidebar-button" *ngFor="let button of buttonsTop" routerLink="{{ button.buttonRouter }}">
+        {{ button.buttonName }}
       </button>
 
     </div>
@@ -10,16 +10,16 @@
 
   <div class="mid-container">
     <div class="buttons">
-      <button class="sidebar-button" *ngFor="let button of buttonsMid">
-        {{ button }}
+      <button class="sidebar-button" *ngFor="let button of buttonsMid" (click)="createPlaylist()">
+        {{ button.name }}
       </button>
     </div>
   </div>
 
   <div class="playlist-container">
     <div class="playlist-buttons">
-      <button class="playlist-button" *ngFor="let playlist of buttonsPlaylist" routerLink='/main/details/{{playlist.idPlaylist}}'>
-        {{ playlist.playlist_name }}
+      <button class="playlist-button" *ngFor="let playlist of buttonsPlaylist" (click)='intoPlaylist(playlist)'>
+        {{ playlist.name }}
       </button>
     </div>
 

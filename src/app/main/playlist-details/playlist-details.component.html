@@ -2,14 +2,14 @@
   <div class="topside">
     <div class="topside-content">
       <div class="img">
-        <img class="playlist-img" src="{{ selected_playlist.image }}">
+        <img class="playlist-img" src="{{ selected_playlist.photo_path}}">
       </div>
       <div class="text">
         <h6 class="top-text"> Playlist Privada</h6>
-        <h1 class="playlist-title">{{ selected_playlist.playlist_name }}</h1>
+        <h1 class="playlist-title">{{ selected_playlist.name}}</h1>
         <div class="made-by-who">
-          <img class="tiny-img" src="{{ userdata.loggedUser.profile_picture }}" alt="">
-          <p class="tiny-text"> by {{ userdata.loggedUser.name }} </p>
+          <img class="tiny-img" src="{{ this.userService.loggedUser.photo_path }}" alt="">
+          <p class="tiny-text"> by {{ this.userService.loggedUser.username }} </p>
         </div>
       </div>
     </div>
@@ -18,8 +18,8 @@
     <div class="topbar">
 
     </div>
-    <div class="rows-space">
-      <div class="row" *ngFor="let music of selected_playlist.musics; index as i" >
+    <div class="rows-space" >
+      <div class="row" *ngFor="let music of playlist_musics; index as i" >
         <div class="number-play">
           <div class="number">
             <p> {{i+1}} </p>
@@ -34,7 +34,7 @@
 
         <div class="music-info">
           <div class="music-photo">
-            <img src="{{ music.photo }}">
+            <img src="{{ music.photo}}">
           </div>
           <div class="music-info-text">
             <div class="music-title">

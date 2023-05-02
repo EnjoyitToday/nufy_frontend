@@ -9,6 +9,8 @@ import { LoginModule } from './login/login.module';
 import { FaqModule } from './faq/faq.module';
 import { RegisterModule } from './register/register.module';
 import { MainModule } from './main/main.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { MainModule } from './main/main.module';
     LoginModule,
     FaqModule,
     RegisterModule,
-    MainModule
+    MainModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

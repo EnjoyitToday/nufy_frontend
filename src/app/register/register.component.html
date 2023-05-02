@@ -1,23 +1,23 @@
 <div class="register-screen">
-  <div class="register-form-container" style="width: 70%">
+  <div class="register-form-container">
     <h1 class="register-form-container-title">Cadastro</h1>
-    <div class="register-form">
-      <h1 class="register-form-title">Inscreva-se e comece a curtir!</h1>
+    <form [formGroup]="form">
+      <h4 class="register-form-title">Inscreva-se e comece a curtir!</h4>
       <div class="register-form-input-container">
         <h1 class="register-form-label">Qual seu e-mail?</h1>
-        <input class="register-form-input" formControl="emailFormControl1" type="email">
+        <input class="register-form-input" formControlName="email" type="email" id="email">
       </div>
       <div class="register-form-input-container">
         <h1 class="register-form-label">Confirme seu e-mail</h1>
-        <input class="register-form-input" type="email">
+        <input class="register-form-input" formControlName="email_confirm" type="email">
       </div>
       <div class="register-form-input-container">
         <h1 class="register-form-label">Crie sua senha</h1>
-        <input class="register-form-input" type="password">
+        <input class="register-form-input" formControlName="password"type="password">
       </div>
       <div class="register-form-input-container">
         <h1 class="register-form-label">Como devemos chamar você?</h1>
-        <input class="register-form-input" type="password">
+        <input class="register-form-input" formControlName="username" type="password">
         <span>*Será o nome do seu perfil</span>
       </div>
       <div class="register-form-input-date-container">
@@ -73,9 +73,9 @@
         </div>
       </div>
       <div class="register-form-checkbox-button">
-        <button>Inscrever-se</button>
+        <button (click)="submit()">Inscrever-se</button>
       </div>
-    </div>
+    </form>
 
   </div>
   <div class="right-panel" style="width: 30%">

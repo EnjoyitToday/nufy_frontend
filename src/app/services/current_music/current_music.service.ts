@@ -6,14 +6,20 @@ import { Music } from 'src/app/services/user/music';
 })
 export class CurrentMusicService {
 
-  currentMusic:HTMLAudioElement= new Audio();
+  audioInstance:HTMLAudioElement= new Audio();
+  currentMusic:Music;
 
   constructor() { }
 
+  setCurrentMusic(music:Music){
+    this.currentMusic = music;
+  }
+
   playAudio(music:Music){
-    this.currentMusic.pause
-    this.currentMusic.src = `${music.path}`;
-    this.currentMusic.load();
-    this.currentMusic.play();
+    this.setCurrentMusic(music);
+    this.audioInstance.pause
+    this.audioInstance.src = `${music.path}`;
+    this.audioInstance.load();
+    this.audioInstance.play();
   }
 }

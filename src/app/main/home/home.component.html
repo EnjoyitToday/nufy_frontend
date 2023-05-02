@@ -25,12 +25,12 @@
       <h1 class="yourPlaylistsTitle">Suas Playlists</h1>
       <div class="looping-space">
         <div class="card-space" (click)="playlistDetails(playlist)" *ngFor="let playlist of playlists">
-          <button class="card-button" routerLink='/main/details/{{playlist.idPlaylist}}'>
+          <button class="card-button" (click)="intoPlaylist(playlist)">
             <div class="card">
-              <img class="card-image" src="{{ playlist.image }}">
+              <img class="card-image" src="{{ playlist.photo_path }}">
               <div class="card-text">
                 {{
-                  playlist.playlist_name
+                  playlist.name
                 }}
               </div>
             </div>

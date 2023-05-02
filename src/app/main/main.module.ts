@@ -7,6 +7,8 @@ import { RouterModule } from '@angular/router';
 import { HomeModule } from './home/home.module';
 import { PlaylistDetailsModule } from './playlist-details/playlist-details.module';
 import { UserButtonModule } from '../shared/user-button/user-button.module';
+import { SearchModule } from './search/search.module';
+import { ProfileModule } from './profile/profile.module';
 
 
 
@@ -24,7 +26,9 @@ import { UserButtonModule } from '../shared/user-button/user-button.module';
     RouterModule,
     HomeModule,
     PlaylistDetailsModule,
-    UserButtonModule
+    UserButtonModule,
+    SearchModule,
+    ProfileModule
   ]
 })
 export class MainModule { }

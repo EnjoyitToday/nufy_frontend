@@ -4,19 +4,19 @@
       <div class="title">
         <h3 class="roxin">Entrar</h3>
       </div>
-      <div class="inputs">
-        <input placeholder="USUÁRIO">
-        <input placeholder="SENHA">
+      <div class="inputs" [formGroup]="form">
+        <input placeholder="USUÁRIO" formControlName="username">
+        <input placeholder="SENHA" type="password" formControlName="password">
       </div>
       <div class="sub-line">
         <h5>Não tem conta?</h5>
-        <button routerLink="/register" class="button-register" (click)="biloles()">Cadastre-se Já</button>
+        <button routerLink="/register" class="button-register" >Cadastre-se Já</button>
       </div>
       <div class="faq">
-        <button routerLink="/faq" (click)="biloles()">FAQ </button>
+        <button routerLink="/faq">FAQ </button>
       </div>
       <div class="login-button">
-        <button class="login-button-enter" routerLink="/main"  >Entrar</button>
+        <button class="login-button-enter" (click)="submit()">Entrar</button>
       </div>
     </div>
   </div>

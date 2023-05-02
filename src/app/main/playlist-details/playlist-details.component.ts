@@ -1,9 +1,12 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ConfigService } from 'src/app/config/config.service';
 import { CurrentMusicService } from 'src/app/services/current_music/current_music.service';
 import { Music } from 'src/app/services/user/music';
 import { Playlist } from 'src/app/services/user/playlist';
 import { UserService } from 'src/app/services/user/user.service';
+import { PlaylistDetailsService } from './playlist-details.service';
 
 @Component({
   selector: 'app-playlist-details',
@@ -12,30 +15,35 @@ import { UserService } from 'src/app/services/user/user.service';
 })
 export class PlaylistDetailsComponent implements OnInit{
 
-  private playlist_id:string = '';
-  selected_playlist:Playlist;
+  public selected_playlist:Playlist;
+  public playlist_musics:Music[];
 
   constructor(
     private activatedRoute:ActivatedRoute,
-    public userdata:UserService,
+    private router:Router,
+    private httpClient:HttpClient,
+    public userService:UserService,
     private currentMusicService:CurrentMusicService,
-    private router:Router
+    private configService:ConfigService,
+    private detailsService:PlaylistDetailsService
 
   ){
   }
 
-  ngOnInit(): void {
-    this.router.events.subscribe((e)=>{
-      this.playlist_id = this.activatedRoute.snapshot.paramMap.get("id")!
-      this.userdata.loggedUser.playlists.map(
-        (e)=>{
-          if(e.idPlaylist == this.playlist_id){
-            this.selected_playlist = e;
-          }
-        }
-      )
-    })
+  async ngOnInit(): Promise<void> {
+    this.selected_playlist = this.detailsService.selected_playlist
+    this.playlist_musics = this.detailsService.playlist_musics
   }
+
+  getPlaylist(id:string){
+    this.userService.loggedUser.playlists.map(
+      (e)=>{
+        if(e.id == Number(id)){
+          this.selected_playlist = e;
+        }
+      }
+    );
+  };
 
   playAudio(music:Music){
     this.currentMusicService.playAudio(music);

@@ -4,6 +4,7 @@ import { FaqComponent } from './faq/faq.component';
 import { LoginComponent } from './login/login.component';
 import { MainComponent } from './main/main.component';
 import { RegisterComponent } from './register/register.component';
+import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
   {
@@ -21,6 +22,7 @@ const routes: Routes = [
   {
     path:'main',
     component:MainComponent,
+    canActivate: [AuthGuard],
     loadChildren:()=> import('./main/main-routing.module').then((m)=> m.MainRoutingModule)
   },
   {

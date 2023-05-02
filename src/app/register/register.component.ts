@@ -1,17 +1,29 @@
-import { Component } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { Component,OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { RegisterService } from './register.service';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
-export class RegisterComponent {
+export class RegisterComponent implements OnInit {
 
-  emailFormControl1 = new FormControl('', [
-    Validators.required,
-    Validators.email,
-  ]);
+  public form:FormGroup
+
+  constructor(
+    public formBuilder:FormBuilder,
+    private registerService:RegisterService
+  ){}
+
+  ngOnInit(): void {
+    this.form = this.formBuilder.group({
+      username:[''],
+      password:[''],
+      email:[''],
+      email_confirm:[''],
+    })
+  }
 
   onScroll(event: Event) {
     const leftPanel = event.target as HTMLElement;
@@ -20,4 +32,16 @@ export class RegisterComponent {
     rightPanel.style.transform = `translateY(${-scrollTop}px)`;
   }
 
+  submit(){
+    const username = this.form.get('username')?.value
+    const password = this.form.get('password')?.value
+    const email = this.form.get('email')?.value
+    const email_confirm = this.form.get('email_confirm')?.value
+    if(email != email_confirm){
+      console.log('email diferente')
+      return
+    }
+    this.registerService.cadasterUser(username,password,email);
+
+  }
 }

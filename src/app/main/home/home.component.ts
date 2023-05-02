@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { UserService } from 'src/app/services/user/user.service';
 import { Playlist } from '../../services/user/playlist';
 import { Propaganda } from './propaganda';
+import { PlaylistDetailsService } from '../playlist-details/playlist-details.service';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,8 @@ import { Propaganda } from './propaganda';
 export class HomeComponent {
 
   constructor(
-    private userdata:UserService
+    private userdata:UserService,
+    private detailsService:PlaylistDetailsService
   ){
     this.playlists = this.userdata.loggedUser.playlists
   }
@@ -32,6 +34,9 @@ export class HomeComponent {
   public playlists:Playlist[]=[]
 
   playlistDetails(playlist:Playlist){
-    console.log(playlist)
+  }
+
+  intoPlaylist(playlist:Playlist){
+    this.detailsService.getMusics(playlist);
   }
 }

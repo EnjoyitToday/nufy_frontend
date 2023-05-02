@@ -1,0 +1,108 @@
+.profile{
+  width: 100%;
+  height: 100%;
+}
+
+.topside{
+  width: 100%;
+  height: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 2px 4px;
+  background: linear-gradient(180.88deg, #D0BFFF -45.28%, #FFFFFF 99.12%);
+}
+
+.profilepicture{
+  width: 25%;
+  height: 90%;
+}
+
+.profilepicture img{
+  width: 100%;
+  height: 100%;
+}
+
+.text-info{
+  width: 60%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.perfil-text{
+  font-weight: 700;
+  width: 95%;
+  color: black;
+}
+
+.profile-name{
+  width: 100%;
+  color: black;
+  font-size: 500%;
+}
+
+.botside{
+  width: 100%;
+  height: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.botside-space{
+  height: 70%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* background-color: blue; */
+}
+
+.botside-left{
+  height: 90%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color:#f6f2ff;
+  border-radius: 15px;
+}
+
+.profile-input{
+  width: 95%;
+  height: 10%;
+  margin: 1%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #5A0682;
+  background-color: transparent;
+}
+
+.about{
+  font-weight: 700;
+}
+
+.about-text{
+  width: 90%;
+}
+
+.update-button{
+  background-color: #5A0682;
+  border: none;
+  width: 15%;
+  height: 10%;
+  color: white;
+  border-radius: 15px;
+  /* padding: 1.5%; */
+}
+
+.update-button:hover{
+  transition: 0.2s;
+  background-color: #D0BFFF;
+  color: black;
+}
