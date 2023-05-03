@@ -4,18 +4,21 @@ import { PlaylistDetailsComponent } from './playlist-details.component';
 import { RouterModule } from '@angular/router';
 import { UserModule } from 'src/app/services/user/user.module';
 import { PlaybarModule } from 'src/app/shared/playbar/playbar.module';
-
-
+import { FormModule } from '@coreui/angular';
+import { ModalComponent } from '../../shared/add-music/add-music-modal';
+import { AddMusicModule } from '../../shared/add-music/add-music.module';
 
 @NgModule({
   declarations: [
-    PlaylistDetailsComponent
+    PlaylistDetailsComponent,
   ],
   imports: [
     CommonModule,
     RouterModule,
     UserModule,
-    PlaybarModule
+    PlaybarModule,
+    FormModule,
+    AddMusicModule,
   ]
 })
 export class PlaylistDetailsModule { }

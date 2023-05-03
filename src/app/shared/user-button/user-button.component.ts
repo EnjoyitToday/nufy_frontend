@@ -10,11 +10,11 @@ import { UserService } from 'src/app/services/user/user.service';
 export class UserButtonComponent {
 
   constructor(
-    public userdata:UserService,
-    private authService:AuthService
-  ){}
+    public userdata: UserService,
+    private authService: AuthService
+  ) { }
 
-  logout(){
+  logout() {
     this.authService.logout()
 
   }

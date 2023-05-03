@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, OnInit } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -8,13 +8,15 @@ import { RouterModule } from '@angular/router';
 import { LoginModule } from './login/login.module';
 import { FaqModule } from './faq/faq.module';
 import { RegisterModule } from './register/register.module';
-import { MainModule } from './main/main.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ModalComponent } from './shared/add-music/add-music-modal';
+import { AddMusicModule } from './shared/add-music/add-music.module';
+import { MainModule } from './main/main.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,11 +26,13 @@ import { HttpClientModule } from '@angular/common/http';
     LoginModule,
     FaqModule,
     RegisterModule,
-    MainModule,
     ReactiveFormsModule,
-    HttpClientModule
+    MainModule,
+    HttpClientModule,
+    AddMusicModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

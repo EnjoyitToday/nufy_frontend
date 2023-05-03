@@ -1,9 +1,9 @@
-.playlist-all{
+.playlist-all {
   width: 100%;
   height: 100%;
 }
 
-.topside{
+.topside {
   width: 100%;
   height: 50%;
   display: flex;
@@ -11,7 +11,7 @@
   align-items: center;
 }
 
-.topside-content{
+.topside-content {
   width: 95%;
   height: 80%;
   display: flex;
@@ -19,13 +19,13 @@
   gap: 2%;
 }
 
-.img{
+.img {
   width: 21%;
   height: 95%;
   border-radius: 15px;
 }
 
-.playlist-img{
+.playlist-img {
   width: 100%;
   height: 100%;
   min-width: 50%;
@@ -33,7 +33,7 @@
   border-radius: 15px;
 }
 
-.text{
+.text {
   width: 70%;
   height: 95%;
   border-radius: 15px;
@@ -43,7 +43,7 @@
   align-items: center;
 }
 
-.top-text{
+.top-text {
   width: 98%;
   height: 10%;
   margin: 0;
@@ -51,7 +51,7 @@
   font-size: 90%;
 }
 
-.playlist-title{
+.playlist-title {
   width: 100%;
   height: 25%;
   margin: 0;
@@ -59,7 +59,7 @@
   font-size: 300%;
 }
 
-.made-by-who{
+.made-by-who {
   height: 10%;
   width: 100%;
   display: flex;
@@ -69,31 +69,44 @@
   /* background-color: rebeccapurple; */
 }
 
-.tiny-img{
+.tiny-img {
   height: 100%;
   width: 3.5%;
 }
 
-.tiny-text{
+.tiny-text {
   height: 100%;
   margin: 0;
   display: flex;
   align-items: center;
 }
 
-.botside{
+.botside {
   width: 100%;
-  height:50% ;
+  height: 50%;
 }
 
-.topbar{
+.topbar {
   background-color: white;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px;
   height: 15%;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }
 
-.rows-space{
+.topbar button {
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  border: none;
+  border-radius: 50%;
+  background-color: #9375e7;
+  color: white;
+}
+
+.rows-space {
   height: 85%;
   width: 100%;
   display: flex;
@@ -101,7 +114,7 @@
   flex-direction: column;
 }
 
-.row{
+.row {
   height: 17%;
   width: 100%;
   margin: 0;
@@ -110,7 +123,7 @@
   /* background-color: rebeccapurple; */
 }
 
-.number-play{
+.number-play {
   width: 4%;
   height: 100%;
   display: flex;
@@ -119,10 +132,10 @@
   /* background-color: black; */
 }
 
-.number{
+.number {
   display: flex;
   font-size: 130%;
-  color:#D0BFFF ;
+  color: #D0BFFF;
   /* background-color: blue; */
   height: 90%;
   width: 100%;
@@ -131,7 +144,8 @@
   justify-content: center;
   align-items: center
 }
-.number p{
+
+.number p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -141,7 +155,7 @@
   /* background-color: yellow; */
 }
 
-.playbutton{
+.playbutton {
   display: none;
   justify-content: center;
   align-items: center;
@@ -150,39 +164,39 @@
   /* background-color: red; */
 }
 
-.playbutton button{
+.playbutton button {
   border: none;
   background-color: transparent;
 }
 
-.playbutton img{
+.playbutton img {
   height: 55%;
 }
 
-.row:hover{
+.row:hover {
   background-color: #eeeeee;
 }
 
-.row:hover > .number-play > .number{
-  display: none!important;
+.row:hover>.number-play>.number {
+  display: none !important;
 }
 
-.row:hover > .number-play > .playbutton{
-  display: flex!important;
+.row:hover>.number-play>.playbutton {
+  display: flex !important;
 }
 
-.playbutton img:hover{
+.playbutton img:hover {
   filter: invert(69%) sepia(50%) saturate(1409%) hue-rotate(203deg) brightness(99%) contrast(92%);
   cursor: pointer;
 }
 
-.numbers-indication p{
+.numbers-indication p {
   font-size: 150%;
   margin: 0;
   padding: 0;
 }
 
-.music-info{
+.music-info {
   width: 50%;
   height: 100%;
   display: flex;
@@ -193,18 +207,18 @@
 
 }
 
-.music-photo{
+.music-photo {
   height: 95%;
   width: 8%;
 }
 
-.music-photo img{
+.music-photo img {
   width: 100%;
   height: 100%;
 
 }
 
-.music-info-text{
+.music-info-text {
   height: 95%;
   width: 80%;
   display: flex;
@@ -212,19 +226,19 @@
   justify-content: center;
 }
 
-.music-title{
+.music-title {
   width: 90%;
   height: 45%;
   font-size: 105%;
 }
 
-.music-band{
+.music-band {
   width: 90%;
   height: 45%;
   font-size: 80%;
 }
 
-.album{
+.album {
   width: 15%;
   height: 100%;
   display: flex;
@@ -234,7 +248,7 @@
   padding: 0;
 }
 
-.timestamp{
+.timestamp {
   width: 10%;
   height: 100%;
   display: flex;

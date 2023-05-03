@@ -16,10 +16,11 @@
   </div>
   <div class="botside">
     <div class="topbar">
-
+      <button (click)="modal.toggle()">+</button>
     </div>
-    <div class="rows-space" >
-      <div class="row" *ngFor="let music of playlist_musics; index as i" >
+    <app-modal #modal />
+    <div class="rows-space">
+      <div class="row" *ngFor="let music of playlist_musics; index as i">
         <div class="number-play">
           <div class="number">
             <p> {{i+1}} </p>
@@ -46,8 +47,8 @@
 
           </div>
         </div>
-        <div class="album">
-          {{ music.album }}
+        <div style="cursor: pointer;" class="album" (click)="excludemusicdaplaylist(music.id)">
+          X
         </div>
         <div class="timestamp">
           {{ music.timestamp }}

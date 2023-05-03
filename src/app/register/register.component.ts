@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { RegisterService } from './register.service';
 
@@ -9,19 +9,19 @@ import { RegisterService } from './register.service';
 })
 export class RegisterComponent implements OnInit {
 
-  public form:FormGroup
+  public form: FormGroup
 
   constructor(
-    public formBuilder:FormBuilder,
-    private registerService:RegisterService
-  ){}
+    public formBuilder: FormBuilder,
+    private registerService: RegisterService
+  ) { }
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
-      username:[''],
-      password:[''],
-      email:[''],
-      email_confirm:[''],
+      username: [''],
+      password: [''],
+      email: [''],
+      email_confirm: [''],
     })
   }
 
@@ -32,16 +32,15 @@ export class RegisterComponent implements OnInit {
     rightPanel.style.transform = `translateY(${-scrollTop}px)`;
   }
 
-  submit(){
+  async submit() {
     const username = this.form.get('username')?.value
     const password = this.form.get('password')?.value
     const email = this.form.get('email')?.value
     const email_confirm = this.form.get('email_confirm')?.value
-    if(email != email_confirm){
-      console.log('email diferente')
+    if (email != email_confirm) {
       return
     }
-    this.registerService.cadasterUser(username,password,email);
+    await this.registerService.cadasterUser(username, password, email);
 
   }
 }

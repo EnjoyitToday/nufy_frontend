@@ -9,8 +9,8 @@ import { PlaylistDetailsModule } from './playlist-details/playlist-details.modul
 import { UserButtonModule } from '../shared/user-button/user-button.module';
 import { SearchModule } from './search/search.module';
 import { ProfileModule } from './profile/profile.module';
-
-
+import { ModalComponent } from '../shared/add-music/add-music-modal';
+import { AddMusicModule } from '../shared/add-music/add-music.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,7 @@ import { ProfileModule } from './profile/profile.module';
     PlaylistDetailsModule,
     UserButtonModule,
     SearchModule,
-    ProfileModule
+    ProfileModule,
   ]
 })
 export class MainModule { }

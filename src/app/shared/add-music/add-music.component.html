@@ -1,0 +1,12 @@
+<ng-container *ngIf="show">
+  <div class="add-music-modal">
+    <input type="text" (input)="onChangeInput($event)" placeholder="Nome da música">
+    <div class="musics-options-modal" *ngFor="let music of musics">
+      <div (click)="addMusic(music.id)" style="cursor:pointer ">
+        <button>{{music.name}}</button>
+      </div>
+    </div>
+  </div>
+  <div class="add-musicoverlay"></div>
+
+</ng-container>
