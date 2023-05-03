@@ -16,7 +16,21 @@
   </div>
   <div class="botside">
     <div class="topbar">
-      <button (click)="modal.toggle()">+</button>
+      <div class="topbar-hash">
+        <p>#</p>
+      </div>
+      <div class="topbar-title">
+        <p>Título</p>
+      </div>
+      <div class="topbar-duration">
+        <img src="/assets/img/Duration.svg" alt="">
+      </div>
+      <div class="topbar-album">
+        <p >Album</p>
+      </div>
+      <div class="topbar-addButton">
+        <button (click)="modal.toggle()">+</button>
+      </div>
     </div>
     <app-modal #modal />
     <div class="rows-space">
@@ -47,11 +61,17 @@
 
           </div>
         </div>
-        <div style="cursor: pointer;" class="album" (click)="excludemusicdaplaylist(music.id)">
-          X
-        </div>
         <div class="timestamp">
           {{ music.timestamp }}
+        </div>
+        <div class="album">
+          {{ music.album.name }}
+        </div>
+
+        <div class="deleteButton" (click)="deleteMusicFromPlaylist(music.id)">
+          <button>
+            X
+          </button>
         </div>
       </div>
     </div>

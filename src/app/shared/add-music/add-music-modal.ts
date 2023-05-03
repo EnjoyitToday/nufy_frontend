@@ -32,8 +32,13 @@ export class ModalComponent implements OnInit {
 
     obsMusics.subscribe(value => {
       this.musics = <any[]>value;
+      console.log(this.musics)
     })
   }
+
+  hideModal(){
+    this.show = false;
+  };
 
   addMusic(music: any) {
 
@@ -46,6 +51,7 @@ export class ModalComponent implements OnInit {
       this.reloadCurrentRoute()
     })
   }
+
   reloadCurrentRoute() {
     const currentUrl = this.router.url;
     this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {

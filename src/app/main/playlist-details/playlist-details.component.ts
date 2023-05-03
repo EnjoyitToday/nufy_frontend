@@ -51,11 +51,12 @@ export class PlaylistDetailsComponent implements OnInit {
     this.currentMusicService.playAudio(music);
   }
 
-  async excludemusicdaplaylist(musicId: number) {
+  async deleteMusicFromPlaylist(musicId: number) {
     const res: any = await this.playlistService.removeMusicToPlaylist({ music_id: musicId, playlist_id: this.detailsService.selected_playlist.id })
     this.detailsService.playlist_musics = res?.music
     this.reloadCurrentRoute()
   }
+
   reloadCurrentRoute() {
     const currentUrl = this.router.url;
     this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
