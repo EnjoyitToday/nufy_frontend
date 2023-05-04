@@ -1,22 +1,17 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user/user.service';
 import { Playlist } from '../../services/user/playlist';
 import { Propaganda } from './propaganda';
 import { PlaylistDetailsService } from '../playlist-details/playlist-details.service';
+import { PlaylistService } from 'src/app/services/playlist/playlist.service';
+import { HomeService } from './home.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
-
-  constructor(
-    private userdata:UserService,
-    private detailsService:PlaylistDetailsService
-  ){
-    this.playlists = this.userdata.loggedUser.playlists
-  }
+export class HomeComponent implements OnInit {
 
   public propagandas:Propaganda[]=[
     {
@@ -33,7 +28,14 @@ export class HomeComponent {
 
   public playlists:Playlist[]=[]
 
-  playlistDetails(playlist:Playlist){
+  constructor(
+    private detailsService:PlaylistDetailsService,
+    private playlistService:PlaylistService,
+    private homeService:HomeService
+  ){}
+
+  ngOnInit(){
+    this.playlists = this.homeService.playlists
   }
 
   intoPlaylist(playlist:Playlist){

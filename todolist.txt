@@ -1,0 +1,7 @@
+missing{
+  usuario default nas playlist publicas
+  esconder o botao de add e remove musicas nas playlist publicas
+  editar nome da playlist
+  apagar playlist
+  buscar
+}

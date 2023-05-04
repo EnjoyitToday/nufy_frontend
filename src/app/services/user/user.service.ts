@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class UserService {
 
   constructor(
-    private router:Router
+    private router:Router,
   ) {
     // codigo pra requisitar um back e guardar info em cache
   }
@@ -24,7 +24,6 @@ export class UserService {
       photo_path:user.photo_path,
       playlists:user.playlists,
     }
-    this.router.navigate(['main'])
   }
 }
 // {

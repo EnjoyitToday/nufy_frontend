@@ -88,7 +88,6 @@
 .music-space-column{
   min-height: 100%;
   min-width: 70%;
-  box-shadow: 5px 0 5px -5px rgba(0,0,0,0.5), -5px 0 5px -5px rgba(0,0,0,0.5);
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;

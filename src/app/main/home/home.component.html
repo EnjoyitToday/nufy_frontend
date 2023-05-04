@@ -22,9 +22,9 @@
   </div>
   <div class="main-bot-content">
     <div class="your-playlists">
-      <h1 class="yourPlaylistsTitle">Suas Playlists</h1>
+      <h1 class="yourPlaylistsTitle">Playlists</h1>
       <div class="looping-space">
-        <div class="card-space" (click)="playlistDetails(playlist)" *ngFor="let playlist of playlists">
+        <div class="card-space" *ngFor="let playlist of playlists">
           <button class="card-button" (click)="intoPlaylist(playlist)">
             <div class="card">
               <img class="card-image" src="{{ playlist.photo_path }}">
