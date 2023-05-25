@@ -1,7 +1,12 @@
 missing{
-  usuario default nas playlist publicas
+  usuario default nas playlist publicas(by spotify nas playlist publicas)
   esconder o botao de add e remove musicas nas playlist publicas
-  editar nome da playlist
-  apagar playlist
-  buscar
+  editar nome da playlist privada
+  apagar playlist privada
+  buscar literalmente buscar fodase (playlist e musica)
+  endpoint att user.
+  nao sei se ta tendo validacao do register
 }
+
+  setar  a musica na playbar
+  font rubik hein

@@ -17,9 +17,9 @@
         <p class="about-text">Email:</p>
         <input type="text" class="profile-input" formControlName="email" id="email" value="{{ this.activeUser.loggedUser.email}}" >
         <p class="about-text">Mudar a senha:</p>
-        <input type="text" class="profile-input" formControlName="password" id="password">
+        <input type="password" class="profile-input" formControlName="password" id="password">
         <p class="about-text">Confirmar senha:</p>
-        <input type="text" class="profile-input" formControlName="password_confirm" id="password_confirm">
+        <input type="password" class="profile-input" formControlName="password_confirm" id="password_confirm">
       </div>
     </div>
     <button class="update-button" (click)="submit()">ATUALIZAR</button>
