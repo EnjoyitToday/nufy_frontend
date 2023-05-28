@@ -3,6 +3,12 @@
     <h1 class="register-form-container-title">Cadastro</h1>
     <form [formGroup]="form">
       <h4 class="register-form-title">Inscreva-se e comece a curtir!</h4>
+      <div class="register-form-errors alert alert-danger" *ngIf="this.errors">
+        <h5>O registro não pode ser concluído devido aos seguintes erros:</h5>
+        <ul class="m-3">
+          <li class="p-1" *ngFor="let formError of this.errors">{{formError.humanMessage}}</li>
+        </ul>
+      </div>
       <div class="register-form-input-container">
         <h1 class="register-form-label">Qual seu e-mail?</h1>
         <input class="register-form-input" formControlName="email" type="email" id="email">
@@ -13,7 +19,11 @@
       </div>
       <div class="register-form-input-container">
         <h1 class="register-form-label">Crie sua senha</h1>
-        <input class="register-form-input" formControlName="password"type="password">
+        <input class="register-form-input" formControlName="password" type="password">
+      </div>
+      <div class="register-form-input-container">
+        <h1 class="register-form-label">Confirme sua senha</h1>
+        <input class="register-form-input" formControlName="password_confirm" type="password">
       </div>
       <div class="register-form-input-container">
         <h1 class="register-form-label">Como devemos chamar você?</h1>
@@ -49,11 +59,11 @@
             <label for="Feminino">Feminino</label>
           </div>
           <div>
-            <input name="gen"  type="radio" placeholder="Não-binário">
+            <input name="gen" type="radio" placeholder="Não-binário">
             <label for="Não-binário">Não-binário</label>
           </div>
           <div>
-            <input name="gen"  type="radio" placeholder="Outros">
+            <input name="gen" type="radio" placeholder="Outros">
             <label for="Outros">Outros</label>
           </div>
           <div>
@@ -80,10 +90,10 @@
   </div>
   <div class="right-panel" style="width: 30%">
     <div class="register-screen-spotify-logo">
-        <div>
-          <img class="register-screen-" src="/assets/img/white-spotify-logo.svg" alt="Vector" />
-          <p>Escute e compartilhe com os amigos!</p>
-        </div>
+      <div>
+        <img class="register-screen-" src="/assets/img/white-spotify-logo.svg" alt="Vector" />
+        <p>Escute e compartilhe com os amigos!</p>
       </div>
-</div>
+    </div>
+  </div>
 </div>
