@@ -1,7 +1,7 @@
 <ng-container *ngIf="show">
   <div class="add-music-modal">
 
-    <div class="container" >
+    <div class="container">
 
       <div class="music-input">
         <div class="deleteButton" (click)="hideModal()">
@@ -15,7 +15,7 @@
         <div class="music-space-column">
           <button class="row" (click)="addMusic(music.id)" *ngFor="let music of musics">
             <div class="img">
-              <img src="{{ music.photo }}" >
+              <img src="{{ music.photo }}">
             </div>
             <div class="name">
               <p>{{ music.name }}</p>

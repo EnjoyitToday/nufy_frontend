@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { FormError } from '../shared/types/formError';
 import { RegisterService } from './register.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -15,6 +16,7 @@ export class RegisterComponent implements OnInit {
 
   constructor(
     public formBuilder: FormBuilder,
+    private router: Router,
     private registerService: RegisterService
   ) { }
 
@@ -31,6 +33,7 @@ export class RegisterComponent implements OnInit {
         disabled: false,
       }, [
         Validators.required,
+        this.checkPasswordLength('password', 'incorrect_length')
       ]],
       password_confirm: [{
         value: '',
@@ -52,7 +55,7 @@ export class RegisterComponent implements OnInit {
       }, [
         Validators.email,
         Validators.required,
-        this.mismatchedFields('password', 'mismatched_email')
+        this.mismatchedFields('email', 'mismatched_email')
       ]],
     })
   }
@@ -75,24 +78,23 @@ export class RegisterComponent implements OnInit {
         return
       }
       await this.registerService.cadasterUser(username, password, email);
-
+      this.router.navigate([''])
       return
     }
-
     this.errors = this.getFormValidationErrors(this.form)
     console.log(this.errors)
   }
 
-  getFormValidationErrors (form: FormGroup): FormError[] {
+  getFormValidationErrors(form: FormGroup): FormError[] {
     const result: FormError[] = [];
-    Object.keys (form.controls).forEach (key => {
-      const controlErrors: ValidationErrors|null|undefined = form.get (key)?.errors;
+    Object.keys(form.controls).forEach(key => {
+      const controlErrors: ValidationErrors | null | undefined = form.get(key)?.errors;
       if (controlErrors) {
-        Object.keys (controlErrors).forEach (keyError => {
-          result.push ({
+        Object.keys(controlErrors).forEach(keyError => {
+          result.push({
             control: key,
             error: keyError,
-            value: controlErrors [keyError],
+            value: controlErrors[keyError],
             humanMessage: this.getHumanMessage(keyError, key)
           });
         });
@@ -108,7 +110,8 @@ export class RegisterComponent implements OnInit {
       email: 'E-mail inválido por favor digite um e-mail válido, exemplo: example@example.com.',
       required: `O campo ${input} é obrigatório.`,
       mismatched_email: 'Os emails não são iguais.',
-      mismatched_password: 'As senhas não são iguais.'
+      mismatched_password: 'As senhas não são iguais.',
+      incorrect_length: 'A senha deve conter pelo menos 8 caracteres'
     }
 
     return errorMessages[error]
@@ -146,6 +149,25 @@ export class RegisterComponent implements OnInit {
     }
   }
 
+  checkPasswordLength(passwordInput: string, errorKey: string): ValidatorFn {
+    return (control: AbstractControl): { [key: string]: unknown } => {
+      const parent = control.parent;
+      if (!parent) {
+        return {}
+      }
+
+      const otherControl = parent.get(passwordInput)
+      const otherControlValue = otherControl?.value as string
+      const actualControlValue = control.value as string
+      if (actualControlValue.length < 8 || actualControlValue.length > 50) {
+        return {
+          [errorKey]: true,
+        }
+      }
+
+      return {}
+    }
+  }
 
 
 }

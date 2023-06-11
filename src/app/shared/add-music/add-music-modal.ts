@@ -36,7 +36,7 @@ export class ModalComponent implements OnInit {
     })
   }
 
-  hideModal(){
+  hideModal() {
     this.show = false;
   };
 

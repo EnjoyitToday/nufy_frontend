@@ -1,12 +1,20 @@
 <div class="search">
   <div class="searchbox">
     <div class="aux">
-      <input type="text" placeholder="O que você quer ouvir?">
+      <input type="text" (input)="onChangeInput($event)" placeholder="O que você quer ouvir?">
     </div>
   </div>
-  <div class="content">
-    <div class="make-your-search">
-      <p> FAÇA SUA BUSCA :P</p>
+  <div class="music-loop-space">
+    <div class="music-space-column-search">
+      <button class="row-search" (click)="addMusic(music.id)" *ngFor="let music of musics">
+        <div class="img-photo">
+          <img src="{{ music.photo }}">
+        </div>
+        <div class="name-row">
+          <p>{{ music.name }}</p>
+        </div>
+      </button>
+
     </div>
   </div>
 </div>

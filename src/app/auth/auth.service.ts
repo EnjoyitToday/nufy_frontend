@@ -11,18 +11,18 @@ import { AcessToken } from '../login/acessToken.interface';
 })
 export class AuthService {
 
-  userLogged:boolean = false;
-  userToken:string
-  headers:any
+  userLogged: boolean = false;
+  userToken: string
+  headers: any
 
   constructor(
-    private userService:UserService,
-    private router:Router,
-    private httpClient:HttpClient,
-    private configService:ConfigService
+    private userService: UserService,
+    private router: Router,
+    private httpClient: HttpClient,
+    private configService: ConfigService
   ) { }
 
-  async login(e:any){
+  async login(e: any) {
     this.setToken(e)
     this.setHeaders()
     const userData = await this.getUserData();
@@ -32,7 +32,7 @@ export class AuthService {
 
   async getUserData(): Promise<any> {
     try {
-      const response = await firstValueFrom(this.httpClient.get(`${this.configService.apiUrl}/users`,this.headers));
+      const response = await firstValueFrom(this.httpClient.get(`${this.configService.apiUrl}/users`, this.headers));
       return response;
     } catch (error) {
       console.error('Error fetching data: ', error);
@@ -40,11 +40,22 @@ export class AuthService {
     }
   };
 
-  setToken(e:AcessToken){
-    this.userToken =e.accessToken
+  async updateUser(user: any) {
+    try {
+      const response = await firstValueFrom(this.httpClient.put(`${this.configService.apiUrl}/users`, user, this.headers));
+      console.log(response)
+      return response;
+    } catch (error) {
+      console.error('Error fetching data: ', error);
+      throw error;
+    }
+  }
+
+  setToken(e: AcessToken) {
+    this.userToken = e.accessToken
   };
 
-  setHeaders(){
+  setHeaders() {
     const httpOptions = {
       headers: new HttpHeaders({
         'Authorization': this.userToken
@@ -53,13 +64,13 @@ export class AuthService {
     this.headers = httpOptions;
   };
 
-  async logout(){
-    this.userLogged=false;
-    this.userToken ='';
+  async logout() {
+    this.userLogged = false;
+    this.userToken = '';
     this.router.navigate([``]);
   };
 
-  checkLogin():boolean{
-     return this.userLogged;
+  checkLogin(): boolean {
+    return this.userLogged;
   }
 }

@@ -1,25 +1,30 @@
 <div class="profile">
   <div class="topside">
     <div class="profilepicture">
-      <img src="{{ this.activeUser.loggedUser.photo_path }}" alt="">
+      <img src="{{ this.userService.loggedUser.photo_path }}" alt="">
     </div>
     <div class="text-info">
       <h6 class="perfil-text">Perfil</h6>
-      <h1 class="profile-name">{{ this.activeUser.loggedUser.username }}</h1>
+      <h1 class="profile-name">{{ this.userService.loggedUser.username }}</h1>
     </div>
   </div>
   <div class="botside">
     <div class="botside-space">
       <h5 class="about">Sobre:</h5>
       <div class="botside-left">
-        <p class="about-text">Nome:</p>
-        <input type="text" class="profile-input" formControlName="username" id="username" value="{{ this.activeUser.loggedUser.username}}">
-        <p class="about-text">Email:</p>
-        <input type="text" class="profile-input" formControlName="email" id="email" value="{{ this.activeUser.loggedUser.email}}" >
-        <p class="about-text">Mudar a senha:</p>
-        <input type="password" class="profile-input" formControlName="password" id="password">
-        <p class="about-text">Confirmar senha:</p>
-        <input type="password" class="profile-input" formControlName="password_confirm" id="password_confirm">
+        <form action="" [formGroup]="form">
+          <p class="about-text">Nome:</p>
+          <input type="text" class="profile-input" formControlName="username" id="username"
+            value="{{ this.userService.loggedUser.username}}">
+          <p class="about-text">Email:</p>
+          <input type="text" class="profile-input" formControlName="email" id="email"
+            value="{{ this.userService.loggedUser.email}}">
+          <p class="about-text">Mudar a senha:</p>
+          <input type="password" class="profile-input" formControlName="password" id="password">
+          <p class="about-text">Confirmar senha:</p>
+          <input type="password" class="profile-input" formControlName="password_confirm" id="password_confirm">
+
+        </form>
       </div>
     </div>
     <button class="update-button" (click)="submit()">ATUALIZAR</button>
